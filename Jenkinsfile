@@ -13,6 +13,7 @@ pipeline {
         }
 
         stage('build') {
+            agent { label 'master' }
             steps {
               script{
                 echo 'Building'
