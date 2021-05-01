@@ -21,6 +21,12 @@ pipeline {
               }
             }
         }
+        stage('Docker'){
+            steps {
+                echo 'Testing docker installation'
+                sh 'docker ps -a'
+            }
+        }
         
       stage('deploy') {
             steps {
