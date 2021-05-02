@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         registry = "dasu0000/dockergradle"
-        registryCredential = 'dockerhub'
+        registryCredential = 'dasu0000-dockerhub'
         dockerImage = ''
     }
     stages {
