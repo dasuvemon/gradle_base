@@ -3,6 +3,7 @@ pipeline {
     environment {
         registry = "dasu0000/dockergradle"
         registryCredential = 'dockerhub'
+        dockerImage = ''
     }
     stages {
         stage('Clone repo') {
