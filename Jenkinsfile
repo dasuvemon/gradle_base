@@ -18,7 +18,8 @@ pipeline {
               script{
                 echo 'Building'
                 //dockerImage = docker.build(registry + ":$BUILD_ID")
-                 sh './gradlew build'
+                 sh "chmod +x gradlew"
+                sh "./gradlew clean build --no-daemon"
                 dockerImage = docker.build registry + ":$BUILD_NUMBER"
               }
             }
